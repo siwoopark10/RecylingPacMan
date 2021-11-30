@@ -12,6 +12,8 @@ public class EnemyBehavior : MonoBehaviour
 
     float speed = 3f;
 
+    bool edible = false;
+
     List<Vector2> directions = new List<Vector2>() {new Vector2(0,1), new Vector2(1,0), new Vector2(-1,0), new Vector2(0,-1) };
 
     void Start()
@@ -27,7 +29,6 @@ public class EnemyBehavior : MonoBehaviour
         if (prevPos != null && prevPos == rb.position)
         {
             direction = GetRandomDirection();
-            Debug.Log("here");
         }
 
         Vector2 translation = direction * speed * Time.fixedDeltaTime;
@@ -43,5 +44,16 @@ public class EnemyBehavior : MonoBehaviour
         int randomIndex = Random.Range(0, 4);
         return directions[randomIndex];
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            if (edible == true)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

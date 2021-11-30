@@ -18,6 +18,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        MoveDirection();
+
+        Vector2 translation = direction * speed * Time.fixedDeltaTime;
+
+        rb.MovePosition(rb.position + translation);
+    }
+
+    private void MoveDirection()
+    {
         if (Input.GetKey(KeyCode.LeftArrow) == true)
         {
             // check if we can move up
@@ -35,9 +44,5 @@ public class Player : MonoBehaviour
         {
             direction = new Vector2(0, -1);
         }
-
-        Vector2 translation = direction * speed * Time.fixedDeltaTime;
-
-        rb.MovePosition(rb.position + translation);
     }
 }
