@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public static bool you_won = false;
 
+    public Pause pause;
+
     Rigidbody2D rb;
 
     Vector2 direction;
@@ -32,6 +34,12 @@ public class Player : MonoBehaviour
         {
             you_won = true;
         }
+
+        if (Input.GetKey(KeyCode.Escape) == true)
+        {
+            pause.SetUp();
+        }
+
     }
 
     private void MoveDirection()
@@ -66,6 +74,8 @@ public class Player : MonoBehaviour
         Invoke("edible_false", 5.0f);
         //Debug.Log(edible);
     }
+
+    
 
     void OnCollisionEnter2D(Collision2D col)
     {

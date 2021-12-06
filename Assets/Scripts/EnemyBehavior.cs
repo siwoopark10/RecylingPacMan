@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class EnemyBehavior : MonoBehaviour
 
     float speed = 3f;
 
+    bool destroy ;
+
     
 
     List<Vector2> directions = new List<Vector2>() {new Vector2(0,1), new Vector2(1,0), new Vector2(-1,0), new Vector2(0,-1) };
@@ -21,12 +24,16 @@ public class EnemyBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         direction = new Vector2(0, 1);
         
+        
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        GameObject player = GameObject.Find("Player");
+        destroy = player.GetComponent<Player>().edible;
+
         if (prevPos != null && prevPos == rb.position)
         {
             direction = GetRandomDirection();
@@ -37,8 +44,11 @@ public class EnemyBehavior : MonoBehaviour
         prevPos = rb.position;
 
         rb.MovePosition(prevPos + translation);
-
-        //Debug.Log(edible);
+            
+        if (destroy && GetComponent<SpriteRenderer>().material.color != Color.yellow)
+        {
+            //GetComponent<Renderer>().Color = Color.yellow;
+        }
 
     }
 

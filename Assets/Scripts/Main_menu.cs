@@ -13,4 +13,12 @@ public class Main_menu : MonoBehaviour
     {
         
     }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Return) == true)
+        {
+            PlayGame();
+        }
+    }
 }
