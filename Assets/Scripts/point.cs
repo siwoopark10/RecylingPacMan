@@ -20,6 +20,7 @@ public class point : MonoBehaviour
     {
         //Debug.Log("point");
         Text_points.total_points += 1;
+        SoundManager.PlaySound("coin");
         Destroy(gameObject);
     }
 

@@ -70,12 +70,14 @@ public class EnemyBehavior : MonoBehaviour
             if (destroy_enemy)
             {
                 //Debug.Log("destroy enemy");
+                SoundManager.PlaySound("enemyEaten");
                 gameObject.transform.position = new Vector2(0, 0);
             }
             else
             {
                 //Debug.Log("loose live");
                 LIves.num_lives -= 1;
+                SoundManager.PlaySound("playerHit");
                 direction = direction *-1;
                 
             }
