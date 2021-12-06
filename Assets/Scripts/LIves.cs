@@ -26,6 +26,7 @@ public class LIves : MonoBehaviour
 
     void game_is_over()
     {
+        SoundManager.PlaySound("lose");
         GameOver.Setup();
         Time.timeScale = 0;
     }

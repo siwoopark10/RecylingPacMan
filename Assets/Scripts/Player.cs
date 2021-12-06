@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         if (GameObject.FindWithTag("point") == null)
         {
             you_won = true;
+            SoundManager.PlaySound("win");
         }
     }
 
