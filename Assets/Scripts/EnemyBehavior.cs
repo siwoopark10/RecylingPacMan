@@ -12,7 +12,7 @@ public class EnemyBehavior : MonoBehaviour
 
     float speed = 3f;
 
-    bool edible = false;
+    
 
     List<Vector2> directions = new List<Vector2>() {new Vector2(0,1), new Vector2(1,0), new Vector2(-1,0), new Vector2(0,-1) };
 
@@ -20,6 +20,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         direction = new Vector2(0, 1);
+        
     }
 
     // Update is called once per frame
@@ -36,7 +37,9 @@ public class EnemyBehavior : MonoBehaviour
         prevPos = rb.position;
 
         rb.MovePosition(prevPos + translation);
-        
+
+        //Debug.Log(edible);
+
     }
 
     Vector2 GetRandomDirection()
@@ -45,15 +48,29 @@ public class EnemyBehavior : MonoBehaviour
         return directions[randomIndex];
 
     }
+    
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Debug.Log("it got here");
         if (collision.collider.tag == "Player")
         {
-            if (edible == true)
+            var destroy_enemy = collision.collider.gameObject.GetComponent<Player>().edible;
+            //Debug.Log(destroy_enemy);
+            if (destroy_enemy)
             {
-                Destroy(gameObject);
+                //Debug.Log("destroy enemy");
+                gameObject.transform.position = new Vector2(0, 0);
+            }
+            else
+            {
+                //Debug.Log("loose live");
+                LIves.num_lives -= 1;
+                direction = direction *-1;
+                
             }
         }
+
+        
     }
 }

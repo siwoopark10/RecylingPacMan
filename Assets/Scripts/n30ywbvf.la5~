@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static bool you_won = false;
+    
 
     Rigidbody2D rb;
 
     Vector2 direction;
 
     float speed = 3f;
-
-    public bool edible = false;
 
     void Start()
     {
@@ -27,11 +25,6 @@ public class Player : MonoBehaviour
         Vector2 translation = direction * speed * Time.fixedDeltaTime;
 
         rb.MovePosition(rb.position + translation);
-
-        if (GameObject.FindWithTag("point") == null)
-        {
-            you_won = true;
-        }
     }
 
     private void MoveDirection()
@@ -55,27 +48,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void edible_false()
-    {
-        edible = false;
-    }
-
-    public void edible_true()
-    {
-        edible = true;
-        Invoke("edible_false", 5.0f);
-        //Debug.Log(edible);
-    }
-
     void OnCollisionEnter2D(Collision2D col)
     {
         
-        if(col.gameObject.tag == "Item")
+        if(col.gameObject.tag == "Enemy")
         {
-            if (!edible)
-            {
-                edible_true();
-            }
+            //GameOver.Setup();
+            //Time.timeScale = 0;
+            LIves.num_lives -= 1;
+            
         }
     }
 }
