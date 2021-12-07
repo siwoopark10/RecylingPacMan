@@ -19,8 +19,8 @@ public class point : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log("point");
-        Text_points.total_points += 1;
         SoundManager.PlaySound("coin");
+        Text_points.total_points += 1;
         Destroy(gameObject);
     }
 

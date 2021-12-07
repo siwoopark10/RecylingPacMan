@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    static AudioClip coin, win, lose, enemyEaten, playerHit;
+    static AudioClip coin, win, lose, enemyEaten, playerHit, edible;
     static AudioSource soundManager;
     void Start()
     {
@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
         lose = Resources.Load<AudioClip>("Lose");
         enemyEaten = Resources.Load<AudioClip>("EnemyEaten");
         playerHit = Resources.Load<AudioClip>("PlayerHit");
+        edible = Resources.Load<AudioClip>("edible");
 
         soundManager = GetComponent<AudioSource>();
     }
@@ -42,6 +43,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case "playerHit":
                 soundManager.PlayOneShot(playerHit);
+                break;
+            case "edible":
+                soundManager.PlayOneShot(edible);
                 break;
 
         }

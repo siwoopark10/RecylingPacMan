@@ -21,7 +21,7 @@ public class Item : MonoBehaviour
     {
         if (col.collider.tag == "Player")
         {
-            SoundManager.PlaySound("coin");
+            SoundManager.PlaySound("edible");
             Destroy(gameObject);
         }
 
