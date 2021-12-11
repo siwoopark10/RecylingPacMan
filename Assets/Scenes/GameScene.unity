@@ -4528,7 +4528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.757, y: -260}
+  m_AnchoredPosition: {x: 31.21, y: -283}
   m_SizeDelta: {x: 389.7386, y: 158.3833}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309921539
@@ -5861,7 +5861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.7569, y: 75}
+  m_AnchoredPosition: {x: 31.21, y: 120}
   m_SizeDelta: {x: 571.2234, y: 191.5245}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396299038
@@ -20879,8 +20879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 103.89344, y: -29.4653}
-  m_SizeDelta: {x: 584.0013, y: 167.598}
+  m_AnchoredPosition: {x: 39.48951, y: -40.830692}
+  m_SizeDelta: {x: 1046.1948, y: 357.0215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608074776
 MonoBehaviour:
@@ -20916,7 +20916,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -22392,7 +22392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -222}
+  m_AnchoredPosition: {x: 35.701, y: -262.87}
   m_SizeDelta: {x: 444.7488, y: 140.1029}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766986678
@@ -26397,8 +26397,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.21, y: 44.5452}
-  m_SizeDelta: {x: 620.13, y: 341.6818}
+  m_AnchoredPosition: {x: 46.363976, y: -50.016}
+  m_SizeDelta: {x: 1021.7078, y: 307.5856}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031693953
 MonoBehaviour:
@@ -26434,7 +26434,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
