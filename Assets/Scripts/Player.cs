@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static bool you_won = false;
+    public static bool you_won = true;
 
     public Pause pause;
 
@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     Vector2 direction;
 
-    float speed = 3f;
+    float speed = 5f;
 
     public bool edible = false;
 

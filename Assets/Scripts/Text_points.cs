@@ -8,6 +8,7 @@ public class Text_points : MonoBehaviour
     public you_won_game you_won;
     public static int total_points = 0;
     Text text_points;
+    public static int enemy_recycled = 0;
 
     // Start is called before the first frame update
     void Start()

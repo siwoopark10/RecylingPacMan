@@ -15,6 +15,8 @@ public class game_over_score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + Text_points.total_points;
+        int landfill = Mathf.Max(0, 7 - Text_points.enemy_recycled);
+        score.text = "Score: " + Text_points.total_points + "\n" + Text_points.enemy_recycled + " devices were reused and recycled!" + "\n" + landfill + " devices are contaminating the Earth in the landfill :(";
+
     }
 }

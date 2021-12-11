@@ -72,7 +72,9 @@ public class EnemyBehavior : MonoBehaviour
                 //Debug.Log("destroy enemy");
                 Text_points.total_points += 10;
                 SoundManager.PlaySound("enemyEaten");
-                gameObject.transform.position = new Vector2(0, 0);
+                /*gameObject.transform.position = new Vector2(0, 0);*/
+                Text_points.enemy_recycled += 1;
+                Destroy(gameObject);
             }
             else
             {
