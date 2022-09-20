@@ -1,5 +1,6 @@
 # RecylingPacMan
 
+## Description 
 ### Purpose
 This is a modified version of Pac-Man. Just like the regular Pac-Man, collect all of white pips distributed throughout the map to complete the game. The enemies are the electronic wastes but you can also recylce them by using the your items.
 
