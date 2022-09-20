@@ -19,3 +19,10 @@ Recycled Electronic Waste: 10 points
 
 ## Getting Started
 
+### Prerequisite
+Install the latest version of Unity: https://unity.com/download 
+
+### Installation
+```
+git clone 
+```
