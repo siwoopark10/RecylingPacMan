@@ -19,10 +19,14 @@ Recycled Electronic Waste: 10 points
 
 ## Getting Started
 
+You will have to open the game on Unity and click the play button to play the game.
+
 ### Prerequisite
 Install the latest version of Unity: https://unity.com/download 
 
 ### Installation
 ```
-git clone 
+git clone https://github.com/siwoopark10/RecylingPacMan.git
 ```
+
+
